@@ -1,36 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Perch — Coming Soon</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Perch — CO₂ Monitoring</title>
+  <link rel="icon" type="image/svg+xml" href="assets/perch-bird-white.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    html, body {
-      margin: 0;
-      height: 100%;
+    html, body { margin: 0; padding: 0; background: #0b1622; }
+    a { color: #f4ead2; text-decoration: none; }
+    a:hover { color: #ffffff; }
+
+    .page {
+      min-height: 100vh;
+      position: relative;
+      font-family: 'Instrument Sans', sans-serif;
+      color: #f7f4ec;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
     }
-    body {
-      background: #000;
-      color: #fff;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    .bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: 0;
+    }
+    main {
+      position: relative;
+      z-index: 2;
+      flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      text-align: center;
+      gap: 40px;
+      padding: 0 48px 48px;
     }
-    h1 {
-      font-size: 5rem;
-      margin: 0;
+    .wordmark {
+      width: min(420px, 70vw);
+      height: auto;
+      display: block;
     }
-    p {
-      font-size: 1.5rem;
-      margin: 1rem 0 0;
+    .contact-btn {
+      background: transparent;
+      border: 3px solid #ffffff;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 16px;
+      border-radius: 999px;
+      padding: 14px 32px;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+    .contact-btn:hover {
+      background: #ffffff;
+      color: #1b4f8a;
+    }
+    footer {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: flex-end;
+      padding: 0 48px 32px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      color: #12293f;
     }
   </style>
 </head>
 <body>
-  <h1>Perch</h1>
-  <p>Coming Soon</p>
+  <div class="page">
+    <img src="assets/AdobeStock_1921278503.jpeg" alt="" class="bg">
+    <main>
+      <img src="assets/perch-wordmark-white.svg" alt="Perch" class="wordmark">
+      <div style="display:flex;">
+        <a href="mailto:contact@perch.ac" class="contact-btn">Contact us</a>
+      </div>
+    </main>
+    <footer>
+      <span>&copy; 2026 Perch</span>
+    </footer>
+  </div>
 </body>
 </html>
